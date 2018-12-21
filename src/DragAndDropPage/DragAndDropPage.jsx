@@ -97,34 +97,40 @@ class DragAndDropPage extends Component {
           </Target>
         </div>
         <div className="source-container">
-          <Source
-            onDrop={this.handleDrop}
-            categoryType={ITEM.FILTER_COMP}
-            componentType="Filter"
-          >
-            <ComponentType componentType="Filter" />
-          </Source>
-          <Source
-            onDrop={this.handleDrop}
-            categoryType={ITEM.DATA_VISUAL_COMP}
-            componentType="Table"
-          >
-            <ComponentType componentType="Table" />
-          </Source>
-          <Source
-            onDrop={this.handleDrop}
-            categoryType={ITEM.DATA_VISUAL_COMP}
-            componentType="List"
-          >
-            <ComponentType componentType="List" />
-          </Source>
-          <Source
-            onDrop={this.handleDrop}
-            categoryType={ITEM.DATA_VISUAL_COMP}
-            componentType="Button"
-          >
-            <ComponentType componentType="Button" />
-          </Source>
+          <section>
+            <div>Components</div>
+            <Source
+              onDrop={this.handleDrop}
+              categoryType={ITEM.DATA_VISUAL_COMP}
+              componentType="Table"
+            >
+              <ComponentType componentType="Table" />
+            </Source>
+            <Source
+              onDrop={this.handleDrop}
+              categoryType={ITEM.DATA_VISUAL_COMP}
+              componentType="List"
+              >
+              <ComponentType componentType="List" />
+            </Source>
+            <Source
+              onDrop={this.handleDrop}
+              categoryType={ITEM.DATA_VISUAL_COMP}
+              componentType="Button"
+              >
+              <ComponentType componentType="Button" />
+            </Source>
+          </section>
+          <section>
+            <div>Filter</div>
+            <Source
+              onDrop={this.handleDrop}
+              categoryType={ITEM.FILTER_COMP}
+              componentType="Filter"
+            >
+              <ComponentType componentType="Filter" />
+            </Source>
+          </section>            
         </div>
       </div>
     );

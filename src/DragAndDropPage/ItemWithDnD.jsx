@@ -3,7 +3,7 @@ import { DropTarget, DragSource } from "react-dnd";
 import ComponentType from "./ComponentType";
 
 
-const Card = props => {
+const ItemWithDnD = props => {
   return props.connectDropTarget(
     <div>
       {props.connectDragSource(
@@ -56,5 +56,5 @@ const collectSource = (connect, monitor) => ({
 });
 
 export default DropTarget(typeCard, specTarget, collectTarget)(
-  DragSource(typeCard, specSource, collectSource)(Card)
+  DragSource(typeCard, specSource, collectSource)(ItemWithDnD)
 );
