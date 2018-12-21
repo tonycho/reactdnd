@@ -43,7 +43,6 @@ class DragAndDropPage extends Component {
     const sourceCard = items.find(card => card.id === id);
     const sortCards = items.filter(card => card.id !== id);
 
-    debugger;
     sortCards.splice(index, 0, sourceCard);
     this.setState({
       [targetTypeStateId]: sortCards
